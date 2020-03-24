@@ -1,0 +1,193 @@
+body {
+    min-height: 200px;
+    min-width: 250px;
+    max-width: 250px;
+    margin: 0px;
+}
+
+header {
+    border-bottom: 1px solid black;
+    height: 25px;
+    display: block;
+    margin-top: 3px;
+    justify-content: flex-end;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+table {
+    width: 100%;
+}
+
+#add_event {
+    max-height: 14px;
+    max-width: 14px;
+    float: right;
+    margin: 4px;
+}
+
+.settings, .new_event {
+    background-color: #fffff000;
+    border: 0px;
+    height: 20px;
+    width: 20px;
+    padding: 0px;
+}
+
+.settings {
+    float: left;
+}
+
+.new_event {
+    float: right;
+}
+
+tbody {
+    white-space: nowrap;
+}
+
+td:nth-child(1) {
+    font-size: 11px;
+    width: 50px;
+    padding-left: 5px;
+}
+
+td:nth-child(2) {
+    padding-left: 4px;
+    font-weight: 600;
+    display: table-cell;
+    max-width: 105px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+td:nth-child(3) {
+    visibility: hidden;
+    max-width: 0px;
+}
+
+tr:hover > td:nth-child(3){
+    visibility: visible;
+    max-width: unset;
+    float: right;
+}
+
+tr:hover > td:nth-child(3) > button {
+    height: 20px;
+    width: 20px;
+    padding: 0px;
+}
+
+tr:hover > td:nth-child(3) > button > img{
+    margin: -4px;
+    height: 16px;
+    width: 16px;
+}
+
+.tag {
+    background-color: lightgray;
+    height: 20px;
+    text-align: center;
+    font: normal small-caps 19px/15px fantasy;
+    color: currentColor;
+}
+
+.radio {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #fff0;
+    border: 1px dotted;
+}
+
+.accept-btns {
+    text-align: center;
+}
+
+.accept-btns > .tag {
+    padding-bottom: 22px;
+}
+
+input[type="text"], input[type="datetime-local"] {
+    width: 100%;
+    text-align: center;
+}
+
+::-webkit-datetime-edit { padding: 2px; }
+::-webkit-datetime-edit-text { padding: 0 0.3em; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { display: none; }
+
+/* The container */
+.container {
+    display: inline;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #aaa;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked[value="grey"] ~ .checkmark {
+    background-color: grey;
+  }
+  
+  .container input:checked[value="yellow"] ~ .checkmark {
+    background-color: yellow;
+  }
+  
+  .container input:checked[value="orange"] ~ .checkmark {
+    background-color: orange;
+  }
+  
+  .container input:checked[value="red"] ~ .checkmark {
+    background-color: red;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+      border-radius: 50%;
+      background: white;
+  }

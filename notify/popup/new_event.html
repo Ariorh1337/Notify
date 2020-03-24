@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <button class="settings" id="settings" style="visibility: hidden;"><img src="/popup/svg/setting.svg"></button>
+        </header>
+        <div class="tag">name</div>
+        <input type="text" autocomplete="off" required id="name">
+
+        <div class="tag">
+            <input type="radio" name="text-link" value="text" checked="checked">
+            text - link
+            <input type="radio" name="text-link" value="link">
+        </div>
+        <input type="text" autocomplete="off" id="text">
+
+        <div class="tag">time</div>
+        <input type="datetime-local" required id="time">
+
+        <div class="tag">priority</div>
+        <div class="radio">
+            <label class="container"><input type="radio" name="priority" value="grey" checked="checked"><span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="priority" value="yellow"><span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="priority" value="orange"><span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="priority" value="red"><span class="checkmark"></span></label>
+        </div>
+        <div class="accept-btns">
+            <button class="tag" id="add">add</button>
+            <button class="tag" id="cancel">cancel</button>
+        </div>
+        <script src="memory.js"></script>
+        <script src="new_event.js"></script>
+    </body>
+</html>
