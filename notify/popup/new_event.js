@@ -24,7 +24,8 @@ if (window.location.search !== '') {
         //Time
         var time = new Date(result.date_time);
         time = `${time.getFullYear()}-${
-            String(time.getMonth() + 1).length == 2 ? (time.getMonth() + 1) : '0' + (time.getMonth() + 1)}-${time.getDate()}T${
+            String(time.getMonth() + 1).length == 2 ? (time.getMonth() + 1) : '0' + (time.getMonth() + 1)}-${
+            String((time.getDate() > 9) ? time.getDate() : '0' + time.getDate())}T${
             String(time.getHours()).length == 2 ? time.getHours() : '0' + time.getHours()}:${
             String(time.getMinutes()).length == 2 ? time.getMinutes() : '0' + time.getMinutes()}`;
         document.getElementById('time').setAttribute('value', time);
@@ -34,7 +35,10 @@ if (window.location.search !== '') {
     });
 } else {
 	var time = new Date(Number(new Date()) + (60 * 60 * 1000));
-    time = `${time.getFullYear()}-${String(time.getMonth() + 1).length == 2 ? (time.getMonth() + 1) : '0' + (time.getMonth() + 1)}-${time.getDate()}T${String(time.getHours()).length == 2 ? time.getHours() : '0' + time.getHours()}:00`;
+    time = `${time.getFullYear()}-${
+        String(time.getMonth() + 1).length == 2 ? (time.getMonth() + 1) : '0' + (time.getMonth() + 1)}-${
+        String((time.getDate() > 9) ? time.getDate() : '0' + time.getDate())}T${
+        String(time.getHours()).length == 2 ? time.getHours() : '0' + time.getHours()}:00`;
     //yyyy-mm-ddThh:mm - формат даты ^
     document.getElementById('time').setAttribute('value', time);
 }
